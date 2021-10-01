@@ -19,19 +19,16 @@ services:
 
   db:
     image: mariadb:10.6
-    environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=development_test
-      - MYSQL_USER=username
-      - MYSQL_PASSWORD=password
+    env_file:
+      - ./.env
   redis:
     image: redis:alpine
   celery:
     restart: always
     build:
       context: .
-    command: sh -c "celery -A development_test worker -l info &&
-                    celery -A development_test beat -l info"
+    command: sh -c "celery -A app worker -l info &&
+                    celery -A app beat -l info"
     volumes:
       - ./app:/app
     env_file:
