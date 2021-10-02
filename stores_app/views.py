@@ -41,6 +41,6 @@ def subscription_form(request):
 
 
 def subscription_list(request):
-    all_documents = Subscription.objects.all().order_by('-id')
+    all_documents = Subscription.objects.all().order_by('-store')
 
     return render(request, "stores_app/subscription_list.html", {'all_documents': all_documents})
