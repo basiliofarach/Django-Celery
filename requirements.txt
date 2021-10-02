@@ -17,6 +17,7 @@ django-allauth==0.45.0
 django-celery-beat==2.2.1
 django-celery-results==2.2.0
 django-environ==0.7.0
+django-redis==5.0.0
 django-timezone-field==4.2.1
 idna==3.2
 kombu==5.1.0
