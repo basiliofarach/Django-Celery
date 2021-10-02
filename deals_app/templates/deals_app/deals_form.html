@@ -1,0 +1,5 @@
+<form method="post" action="{% url 'deals_form' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="button" type="submit">Añadir Ofertas</button>
+</form>

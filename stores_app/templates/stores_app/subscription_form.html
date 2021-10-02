@@ -1,0 +1,8 @@
+{% include 'home/header.html' %}
+<form method="post" action="{% url 'subscription_form' %}">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+        
+    <button class="button" type="submit">Añadir Tienda</button>
+</form>

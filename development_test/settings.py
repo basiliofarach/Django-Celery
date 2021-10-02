@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'email_celery',
     'django_celery_results',
     'django_celery_beat',
-    'auth_app',
     'brands_app',
     'deals_app',
     'stores_app',
@@ -119,6 +118,7 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_REQUIRED = True
 
 
 # Password validation

@@ -8,4 +8,4 @@ class Brands(models.Model):
     logo = models.TextField()
 
     def __str__(self):
-        return self.id
+        return self.name

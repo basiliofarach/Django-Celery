@@ -1,0 +1,12 @@
+{% include 'home/header.html' %}
+{% include 'brands_app/brands_form.html' %}
+
+<ul>
+    {% for doc in all_documents %}
+    <li>
+        
+            id: {{ doc.id }}, name: {{doc.name}}, logo: {{doc.logo}}
+        
+    </li>
+    {% endfor %}
+</ul>

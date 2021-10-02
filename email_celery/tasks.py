@@ -9,8 +9,8 @@ from development_test import settings
 def send_mail_func(self):
     users = get_user_model().objects.all()
     for user in users:
-        mail_subject = 'Celery testing'
-        message = '<h1>Test</h1>'
+        mail_subject = 'Celery'
+        message = 'Mensaje a Usuarios'
         to_email = user.email
         send_mail(
             subject=mail_subject,

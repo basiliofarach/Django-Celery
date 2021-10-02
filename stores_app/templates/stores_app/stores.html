@@ -1,0 +1,13 @@
+{% include 'home/header.html' %}
+{% include 'stores_app/stores_form.html' %}
+
+<ul>
+    {% for doc in all_documents %}
+    <li>
+        
+            id: {{ doc.id }}, brand: {{doc.brand}}, identifier: {{doc.identifier}},
+             name: {{doc.name}}, address: {{doc.address}}
+        
+    </li>
+    {% endfor %}
+</ul>

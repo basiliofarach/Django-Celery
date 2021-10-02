@@ -1,0 +1,11 @@
+{% include 'home/header.html' %}
+<ul>
+    {% for doc in all_documents %}
+    <li>
+            {{doc.username}}
+            {{ doc.email }}
+            {{doc.store}}
+        
+    </li>
+    {% endfor %}
+</ul>

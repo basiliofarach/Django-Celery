@@ -1,0 +1,5 @@
+<form method="post" action="{% url 'brands_form' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="button" type="submit">Añadir Marca</button>
+</form>

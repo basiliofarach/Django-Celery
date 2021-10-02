@@ -41,16 +41,25 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'celery' %}" tabindex="-1" aria-disabled="true"><i class="bi bi-envelope-fill"></i> Enviar Email</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'subscription_form' %}" tabindex="-1" aria-disabled="true"><i class="bi bi-star-fill"></i> Suscribirse a Tienda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'subscription_list' %}" tabindex="-1" aria-disabled="true"><i class="bi bi-card-checklist"></i> Suscripciones por tienda</a>
+              </li>
 
             </ul>
 
             {% if user.is_authenticated %}
               <a id="logout" href="/accounts/logout" class="nav-link"><i class="bi bi-box-arrow-in-left"></i>Cerrar Sesión</a>
+              
             {% else %} 
               <a id="login" href="/accounts/google/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i>
                 Entrar con Google
               </a>
-            {% endif %}            
+            {% endif %}     
+            
+            
 
           </div>
         </div>
